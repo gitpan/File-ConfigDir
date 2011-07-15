@@ -32,6 +32,10 @@ foreach my $fn (@supported_functions)
     {
         ok( scalar @dirs <= 1, $fn ) or diag( join( ",", @dirs ) );    # probably we do not have local::lib or File::HomeDir
     }
+    elsif( ( $^O ne "MSWin32" and $fn eq "desktop_cfg_dir" ) or $fn eq "xdg_config_dirs" )
+    {
+        ok( scalar @dirs >= 1, $fn ) or diag( join( ",", @dirs ) );    # probably have multiple directories in $ENV{XDG_CONFIG_DIRS}
+    }
     elsif( $^O eq "MSWin32" and $fn eq "local_cfg_dir" )
     {
         ok( scalar @dirs == 0, $fn ) or diag( join( ",", @dirs ) );

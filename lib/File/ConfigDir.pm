@@ -16,7 +16,7 @@ File::ConfigDir - Get directories of configuration files
 
 =cut
 
-$VERSION = '0.004';
+$VERSION = '0.005';
 @ISA     = qw(Exporter);
 @EXPORT  = ();
 @EXPORT_OK = (
@@ -439,6 +439,8 @@ my $xdg_config_home = sub {
 	push( @dirs, File::Spec->catdir( File::HomeDir->my_home(), ".config", @cfg_base ) )
 	  if ($haveFileHomeDir);
     }
+
+    return @dirs;
 };
 
 sub xdg_config_home
