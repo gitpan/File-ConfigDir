@@ -1,14 +1,10 @@
 Build.PL
 Changes
 lib/File/ConfigDir.pm
-Makefile.PL
-MANIFEST
+MANIFEST			This list of files
 MANIFEST.SKIP
+META.json
 META.yml
 README
 t/00-load.t
 t/01-simple.t
-t/manifest.t
-t/pod-cm.t
-t/pod-coverage.t
-t/pod.t
