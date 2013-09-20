@@ -16,7 +16,7 @@ File::ConfigDir - Get directories of configuration files
 
 =cut
 
-$VERSION = '0.005';
+$VERSION = '0.006';
 @ISA     = qw(Exporter);
 @EXPORT  = ();
 @EXPORT_OK = (
@@ -58,8 +58,8 @@ EOP
     my @appcfgdirs = config_dirs('app');
 
     # install support
-    my $site_cfg_dir = site_cfg_dir();
-    my $vendor_cfg_dir = site_cfg_dir();
+    my $site_cfg_dir = (site_cfg_dir())[0];
+    my $vendor_cfg_dir = (site_cfg_dir()))[0];
 
 =head1 DESCRIPTION
 
@@ -286,6 +286,13 @@ sub vendor_cfg_dir
 }
 
 =head2 singleapp_cfg_dir
+
+Returns the configuration file for standalone installed applications. In
+Unix speak, installing JRE to C<< /usr/local/jre-<version> >> means there is a
+C<< /usr/local/jre-<version>/bin/java >> and going from it's directory name
+one above and into C<etc> there is the I<singleapp_cfg_dir>. For a Perl
+module it means, we're assuming that C<$0> is installed as a standalone
+package somewhere, eg. into C</usr/pkg> - as recommended for pkgsrc ;)
 
 =cut
 
