@@ -3,28 +3,29 @@ abstract: 'Get directories of configuration files'
 author:
   - 'Jens Rehsack <rehsack@cpan.org>'
 build_requires:
-  Test::More: 0.90
+  Test::More: 0.9
 configure_requires:
-  Module::Build: 0.40
+  ExtUtils::MakeMaker: 0
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132661'
+generated_by: 'ExtUtils::MakeMaker version 6.8, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: File-ConfigDir
-provides:
-  File::ConfigDir:
-    file: lib/File/ConfigDir.pm
-    version: 0.008
+no_index:
+  directory:
+    - t
+    - inc
 recommends:
   File::HomeDir: 0.50
   List::MoreUtils: 0.22
 requires:
   Carp: 0
   File::Basename: 0
+  File::Path: 2.00
   File::Spec: 0
+  perl: v5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-  repository: https://github.com/perl5-utils/File-ConfigDir
-version: 0.008
+version: 0.009
