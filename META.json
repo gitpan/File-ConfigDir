@@ -4,7 +4,7 @@
       "Jens Rehsack <rehsack@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.8, CPAN::Meta::Converter version 2.132830",
+   "generated_by" : "ExtUtils::MakeMaker version 6.86, CPAN::Meta::Converter version 2.133380",
    "license" : [
       "perl_5"
    ],
@@ -62,5 +62,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.009"
+   "version" : "0.010"
 }
