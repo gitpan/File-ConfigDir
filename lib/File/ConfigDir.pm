@@ -16,7 +16,7 @@ File::ConfigDir - Get directories of configuration files
 
 =cut
 
-$VERSION = '0.012';
+$VERSION = '0.013';
 @ISA     = qw(Exporter);
 @EXPORT  = ();
 @EXPORT_OK = (
@@ -37,7 +37,7 @@ eval {
     $haveFileHomeDir = 1;
 };
 
-eval { use List::MoreUtils 'uniq'; };
+eval "use List::MoreUtils qw/uniq/;";
 __PACKAGE__->can("uniq") or eval <<'EOP';
     # from PP part of List::MoreUtils
 sub uniq(&@) {
