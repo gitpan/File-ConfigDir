@@ -16,7 +16,7 @@ File::ConfigDir - Get directories of configuration files
 
 =cut
 
-$VERSION = '0.013';
+$VERSION = '0.014';
 @ISA     = qw(Exporter);
 @EXPORT  = ();
 @EXPORT_OK = (
@@ -516,7 +516,7 @@ sub config_dirs
 
 Registers more sources to ask for suitable directories to check or search
 for config files. Each L</config_dirs> will traverse them in subsequent
-invokations, too.
+invocations, too.
 
 Returns the number of directory sources in case of succes. Returns nothing
 when C<$dir_src> is not a code ref.
